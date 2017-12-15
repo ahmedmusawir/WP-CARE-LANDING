@@ -1,0 +1,519 @@
+$customer-primary: #faa720; //Golden Rod
+$customer-secondary: #388ce3; //Royal Blue
+$customer-third: #289c95; //Light Sea Green
+
+@import "bourbon/bourbon";
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300,200,100);
+
+html { 
+ 
+	// display: none;
+
+}
+
+body {
+
+	// display: none;
+	// color: red;
+	h1,h2,h3,h4 {
+		font-family: "Raleway", sans-serif;
+	}
+}
+
+#LOGO {
+	img {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+
+#BLOCK1 {
+
+	background: $customer-primary;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+
+	h1 {
+		font-size: 5rem;
+		color: white;
+	}
+	h5 {
+		font-size: 2rem;
+		font-variant: 700;
+		color: $gray-lighter;
+	} 
+
+}
+
+
+.arrow-block {
+	
+	.arrow-down {
+	  margin: 0 auto;		
+	  width: 0; 
+	  height: 0; 
+	  border-left: 40px solid transparent;
+	  border-right: 40px solid transparent;
+	  
+	  border-top: 40px solid darken($steel, 15%);
+	}	
+}
+
+
+/**
+ *
+ * PRICE BLOCK
+ *
+ */
+#BLOCK6 {
+
+	.arrow-block {
+		margin-bottom: 3rem;
+		
+		.arrow-down {
+		  margin: 0 auto;		
+		  width: 0; 
+		  height: 0; 
+		  border-left: 40px solid transparent;
+		  border-right: 40px solid transparent;
+		  
+	  	  border-top: 40px solid darken($steel, 15%);
+		}	
+	}	
+
+	header {
+		padding-top: 5rem;
+		padding-bottom: 1rem;
+		background: darken($steel, 15%);
+
+
+		h1,h4 {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			color: $snow;
+		}
+
+		#the-switch {
+
+			// border: 1rem solid red;
+					
+			*,*:before,*:after{
+			box-sizing:border-box;
+			margin:0;
+			padding:0;
+			/*transition*/
+			-webkit-transition:.25s ease-in-out;
+			   -moz-transition:.25s ease-in-out;
+			     -o-transition:.25s ease-in-out;
+			        transition:.25s ease-in-out;
+			outline:none;
+			font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
+			}
+
+			h1{
+			margin:75px auto 0 auto;
+			text-align:center;
+			font-weight:200;
+			color:#4b4b4b;
+			}
+
+			#toggles{
+			width:60px;
+			margin:50px auto;
+			text-align:center;
+			}
+			.ios-toggle,.ios-toggle:active{
+			position:absolute;
+			top:-5000px;
+			height:0;
+			width:0;
+			opacity:0;
+			border:none;
+			outline:none;
+			}
+			.checkbox-label{
+			display:block;
+			position:relative;
+			padding:10px;
+			margin-bottom:20px;
+			font-size:12px;
+			line-height:16px;
+			width:130% !important;
+			height:36px;
+			/*border-radius*/
+			-webkit-border-radius:18px;
+			   -moz-border-radius:18px;
+			        border-radius:18px;
+			background: $customer-primary;
+			cursor:pointer;
+			}
+			.checkbox-label:before{
+			content:'';
+			display:block;
+			position:absolute;
+			z-index:1;
+			line-height:34px;
+			text-indent:40px;
+			height:36px;
+			width:36px;
+			/*border-radius*/
+			-webkit-border-radius:100%;
+			   -moz-border-radius:100%;
+			        border-radius:100%;
+			top:0px;
+			left:0px;
+			right:auto;
+			background:white;
+			/*box-shadow*/
+			-webkit-box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+			   -moz-box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+			        box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+			}
+			.checkbox-label:after{
+			content:attr(data-off);
+			display:block;
+			position:absolute;
+			z-index:0;
+			top:0;
+			left:-300px;
+			padding:10px;
+			height:100%;
+			width:300px;
+			text-align:right;
+			color:#bfbfbf;
+			white-space:nowrap;
+			}
+			.ios-toggle:checked + .checkbox-label{
+			/*box-shadow*/
+			-webkit-box-shadow:inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+			   -moz-box-shadow:inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+			        box-shadow:inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+			}
+			.ios-toggle:checked + .checkbox-label:before{
+			left:calc(100% - 36px);
+			/*box-shadow*/
+			-webkit-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+			   -moz-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+			        box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+			}
+			.ios-toggle:checked + .checkbox-label:after{
+			content:attr(data-on);
+			left:60px;
+			width:36px;
+			}
+
+			/* BLUE CHECKBOX */
+
+			#checkbox3 + .checkbox-label{
+			/*box-shadow*/
+			-webkit-box-shadow:inset 0 0 0 0px #1fc1c8,0 0 0 2px #dddddd;
+			   -moz-box-shadow:inset 0 0 0 0px #1fc1c8,0 0 0 2px #dddddd;
+			        box-shadow:inset 0 0 0 0px #1fc1c8,0 0 0 2px #dddddd;
+			}
+			#checkbox3:checked + .checkbox-label{
+			/*box-shadow*/
+			// -webkit-box-shadow:inset 0 0 0 20px #1fc1c8,0 0 0 2px #1fc1c8;
+			//    -moz-box-shadow:inset 0 0 0 20px #1fc1c8,0 0 0 2px #1fc1c8;
+			//         box-shadow:inset 0 0 0 20px #1fc1c8,0 0 0 2px #1fc1c8;
+			}
+			#checkbox3:checked + .checkbox-label:after{
+			color: $customer-primary;
+			}
+
+		}
+	}
+
+	.flex-container {
+
+		// @include align-items(stretch);
+
+
+		@media (min-width: 1100px) {
+
+		  	@include display(flex);
+
+		  	@include flex-direction(row);
+
+		  	@include justify-content(center);			
+		}
+
+	  	.pricebox {
+
+			@media (min-width: 1100px) {
+			  	width: 33%;	  		
+
+			}
+
+			.content {
+	  			padding: 3rem;
+				// background: #fff5c8;
+
+		  		box-shadow: 3px 3px 18px lighten($gray-light, 20%);
+
+		  		h3 {
+		  			color: $customer-third;
+		  			font-weight: 700;
+		  			font-size: 3rem;
+
+					@media (max-width: 1100px) {
+						font-size: 3rem;
+		  			}
+		  		}
+		  		p {
+		  			min-height: 150px;
+		  			padding-top: 3rem;
+					
+					@media (max-width: 1100px) {
+						font-size: 2rem;
+						color: gray;
+					}
+
+		  		}
+		  		.btn {
+		  			margin-top: 3rem;
+		  		}				
+			}
+			.middlebox {
+	  			border: 1rem solid $customer-primary;
+	  			height: 500px;
+	  		}	
+	  		.sidebox {
+	  			margin-top: 2rem;
+	  			margin-bottom: 2rem;
+	  		}				
+	  	}
+	}
+  	.block6-footer {
+  		margin-top: 5rem;
+  		img {
+  			width: 30%;
+  		}
+  		p {
+  			margin-top: 2rem;
+  			margin-bottom: 2rem;
+  		}
+  	}	
+}
+
+/**
+ *
+ * Blue Background Block 
+ *
+ */
+
+#BLOCK7 {
+
+	background-size: cover;
+    background-position: center center;
+    background-image: url(https://optassets.ontraport.com/opt_assets/blocks/common/stockPhoto/blocks/block31bg/bg-fauceted-blue2.png);	
+
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+
+	@media (min-width: 1000px) {
+		padding-top: 1rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+		color: white;
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+	}
+	.btn {
+		padding: 1rem 5rem;
+		border-radius: 50px;
+	}
+}
+
+/**
+ *
+ * ALL PLANS INCLUDE BLOCK
+ *
+ */
+
+#BLOCK8 {
+
+	h1 {
+		padding-top: 5rem;
+	}
+
+	.row {
+		// margin-top: 5rem;
+	}
+
+	img {
+		padding-right: 4rem;
+	}
+
+
+	hr {
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	    height: 12px;
+	    border: 0;
+	    box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+	}
+}
+
+
+/**
+ *
+ * FEATURES TABLE
+ *
+ */
+#BLOCK9 {
+
+	background: $customer-third;
+	color: white;
+
+	h1 {
+		text-align: center;	
+		padding-top: 5rem;
+		padding-bottom: 5rem;	
+		color: white;
+	}
+	h2, h3, h4, h5 {
+		color: white;
+	}
+	.modal-text {
+		color: gray;
+	}
+
+	table {
+		margin-bottom: 5rem;
+
+		thead {
+			th.top-left {
+				border-top: 1px solid $customer-third;
+				border-left: 1px solid $customer-third;
+			}
+			th.special {
+				border-top: 2rem solid $customer-primary;
+			}
+		}
+		td {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		a {
+			color: white;
+		}
+	}
+}
+
+/**
+ *
+ * ALL PLANS INCLUDE BLOCK
+ *
+ */
+
+#BLOCK10 {
+
+	background: url(https://unbounce-wpengine.netdna-ssl.com/photos/unlimited_support_bg.jpg);
+	background-size: cover;
+
+	padding-top: 5rem;
+	padding-bottom: 8rem;
+
+	h1 {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+	h3 {
+		font-size: 2rem;
+		font-weight: 600;
+		min-height: 50px;
+	}
+	p {
+		font-size: 1.7rem;
+		font-weight: 300;
+	}
+
+	img {
+		padding-right: 4rem;
+	}
+
+	.right-content {
+		padding-bottom: 2rem;
+	}
+}
+
+/**
+ *
+ * FAQ BLOCK
+ *
+ */
+#BLOCK {
+	margin-top: 5rem;
+
+	h1 {
+		border-bottom: 3px solid gray;
+		padding-bottom: 2rem;
+		color: gray;
+		font-size: 5rem;
+		text-align: center;
+	}
+
+	h2 {
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: gray;
+	}
+	p {
+		font-size: 2rem;
+		color: darken(gray, 10%);
+
+		@media (max-width: 600px) {
+		}
+	}
+
+}
+
+#SITE-FOOTER {
+	margin-top: 3rem;
+	padding: 5rem;
+	background: darken($steel, 10%);
+	nav {
+		li {
+			list-style: none;
+			display: inline-block;
+			font-size: 2rem;
+			padding-right: 1rem;
+		}
+	}
+	.copyright {
+		color: white;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
